@@ -1,5 +1,5 @@
 name: transmission_api
-description: A new Flutter project.
+description: A Transmission client library for dart.
 version: 0.0.1
 homepage: https://github.com/xxzj990/transmission_api
 
