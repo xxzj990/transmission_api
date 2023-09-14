@@ -1,7 +1,7 @@
 name: transmission_api
 description: A new Flutter project.
 version: 0.0.1
-homepage: https://xxzj990.top
+homepage: https://github.com/xxzj990/transmission_api
 
 environment:
   sdk: '>=3.0.6 <4.0.0'

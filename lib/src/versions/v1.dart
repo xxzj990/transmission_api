@@ -45,7 +45,8 @@ class V1 extends Version {
 
   Future<void> _updateVersion() async {
     try {
-      final value = await session.sessionGet(fields: SessionArgs().rpcVersion());
+      final value =
+          await session.sessionGet(fields: SessionArgs().rpcVersion());
       final args = value['arguments'];
       if (args != null && args is Map) {
         final tmp = args['rpc-version'];
@@ -92,7 +93,8 @@ class V1 extends Version {
           final resTag = response.data!['tag'];
           if (resTag != tag) {
             throw TransmissionException(
-                'response tag err.expect $tag,response $resTag');
+              'response tag err.expect $tag,response $resTag',
+            );
           }
         }
 
