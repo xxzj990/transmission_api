@@ -58,17 +58,6 @@ class Transmission {
   /// Provide [logConfig]
   /// to configure your logs from [TMDB] library, by default it shows none.
   ///
-  ///`format`:
-  /// - If the format request was objects (default), torrents will be
-  /// an array of objects, each of which contains the key/value pairs matching
-  /// the request's fields arg. This was the only format before Transmission 3
-  /// and has some obvious programmer conveniences, such as parsing directly
-  /// into Javascript objects.
-  /// - If the format was table, then torrents will be an array of arrays.
-  /// The first row holds the keys and each remaining row holds a torrent's
-  /// values for those keys. This format is more efficient in terms of JSON
-  /// generation and JSON parsing.
-  ///
   ///`useTag`:
   /// An optional tag number used by clients to track responses.
   /// If provided by a request, the response MUST include the same tag.
