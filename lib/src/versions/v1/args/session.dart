@@ -17,7 +17,7 @@ class SessionArgs {
 
   Map<String, dynamic> argsSet(int rpc) => UnmodifiableMapView(
         {
-          for (var e in _args.where(
+          for (final e in _args.where(
             (element) =>
                 !_argsReadOnly.contains(element.name) &&
                 rpc >= element.minRpc &&
@@ -316,14 +316,16 @@ class SessionArgs {
   /// boolean
   /// - From RPC17(Transmission 4.0.0)
   /// - whether or not to call the added script
-  SessionArgs scriptTorrentAddedEnabled([bool? value]) =>
-      this.._args.add(Arg.fromValue('script-torrent-added-enabled', value, minRpc: 17));
+  SessionArgs scriptTorrentAddedEnabled([bool? value]) => this
+    .._args
+        .add(Arg.fromValue('script-torrent-added-enabled', value, minRpc: 17));
 
   /// string
   /// - From RPC17(Transmission 4.0.0)
   /// - filename of the script to run
-  SessionArgs scriptTorrentAddedFilename([String? value]) =>
-      this.._args.add(Arg.fromValue('script-torrent-added-filename', value, minRpc: 17));
+  SessionArgs scriptTorrentAddedFilename([String? value]) => this
+    .._args
+        .add(Arg.fromValue('script-torrent-added-filename', value, minRpc: 17));
 
   /// boolean
   /// - whether or not to call the done script
@@ -339,13 +341,15 @@ class SessionArgs {
   /// - From RPC17(Transmission 4.0.0)
   /// - whether or not to call the seeding-done script
   SessionArgs scriptTorrentDoneSeedingEnabled([bool? value]) => this
-    .._args.add(Arg.fromValue('script-torrent-done-seeding-enabled', value, minRpc: 17));
+    .._args.add(Arg.fromValue('script-torrent-done-seeding-enabled', value,
+        minRpc: 17));
 
   /// string
   /// - From RPC17(Transmission 4.0.0)
   /// - filename of the script to run
   SessionArgs scriptTorrentDoneSeedingFilename([String? value]) => this
-    .._args.add(Arg.fromValue('script-torrent-done-seeding-filename', value, minRpc: 17));
+    .._args.add(Arg.fromValue('script-torrent-done-seeding-filename', value,
+        minRpc: 17));
 
   /// boolean
   /// - From RPC14(Transmission 2.40)

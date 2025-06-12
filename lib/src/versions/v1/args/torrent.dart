@@ -5,7 +5,7 @@ class TorrentAddArgs {
 
   Map<String, dynamic> args(int rpc) => UnmodifiableMapView(
         {
-          for (var e in _args.where(
+          for (final e in _args.where(
             (element) => rpc >= element.minRpc && rpc < element.maxRpc,
           ))
             e.name: e.value
@@ -84,7 +84,7 @@ class TorrentSetArgs {
 
   Map<String, dynamic> args(int rpc) => UnmodifiableMapView(
         {
-          for (var e in _args.where(
+          for (final e in _args.where(
             (element) => rpc >= element.minRpc && rpc < element.maxRpc,
           ))
             e.name: e.value
@@ -368,7 +368,8 @@ class TorrentFields {
 
   /// number
   /// - From RPC16(Transmission 3.00)
-  TorrentFields get editDate => this.._fields.add(Arg.fromName('editDate', minRpc: 16));
+  TorrentFields get editDate =>
+      this.._fields.add(Arg.fromName('editDate', minRpc: 16));
 
   /// number
   TorrentFields get error => this.._fields.add(Arg.fromName('error'));
@@ -387,7 +388,8 @@ class TorrentFields {
 
   /// number
   /// - From RPC17(Transmission 4.0.0)
-  TorrentFields get fileCount => this.._fields.add(Arg.fromName('file-count', minRpc: 17));
+  TorrentFields get fileCount =>
+      this.._fields.add(Arg.fromName('file-count', minRpc: 17));
 
   /// array
   /// - array of objects, each containing
@@ -419,7 +421,8 @@ class TorrentFields {
 
   /// string
   /// - From RPC17(Transmission 4.0.0)
-  TorrentFields get group => this.._fields.add(Arg.fromName('group', minRpc: 17));
+  TorrentFields get group =>
+      this.._fields.add(Arg.fromName('group', minRpc: 17));
 
   /// string
   TorrentFields get hashString => this.._fields.add(Arg.fromName('hashString'));
@@ -454,7 +457,8 @@ class TorrentFields {
 
   /// array of strings
   /// - From RPC16(Transmission 3.00)
-  TorrentFields get labels => this.._fields.add(Arg.fromName('labels', minRpc: 16));
+  TorrentFields get labels =>
+      this.._fields.add(Arg.fromName('labels', minRpc: 16));
 
   /// number
   TorrentFields get leftUntilDone =>

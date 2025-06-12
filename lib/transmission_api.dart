@@ -41,7 +41,7 @@ class Transmission {
   /// Example:
   /// call Transmission().v1.waitRpcVersion() wait real RPC code.
   ///
-  /// ```
+  /// ``` dart
   ///   final tr = Transmission(
   ///     '192.168.50.231:9093',
   ///     AuthKeys('xxx', 'xxx'),
@@ -78,8 +78,6 @@ class Transmission {
     }
     if (tmpUrl.endsWith('/')) {
       tmpUrl = tmpUrl.substring(0, url.length - 1);
-    } else {
-      tmpUrl = tmpUrl;
     }
     _baseUrl = tmpUrl;
     _dio = dio ??

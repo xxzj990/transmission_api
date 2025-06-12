@@ -5,7 +5,7 @@ class GroupSetArgs {
 
   Map<String, dynamic> args(int rpc) => UnmodifiableMapView(
         {
-          for (var e in _args.where(
+          for (final e in _args.where(
             (element) => rpc >= element.minRpc && rpc < element.maxRpc,
           ))
             e.name: e.value

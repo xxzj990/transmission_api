@@ -33,7 +33,7 @@ class ConfigLogger {
   ///Pass this if you want to set all logs to `true` in LogConfig
   ///while creating `Transmission` instance
   ///## Example
-  ///```
+  ///``` dart
   ///Transmission api = Transmission(AuthKeys('username', 'password'), logConfig: ConfigLogger.showAll());
   ///```
   ///
@@ -50,7 +50,7 @@ class ConfigLogger {
   ///
   ///
   ///## Example
-  ///```
+  ///``` dart
   ///Transmission api = Transmission(AuthKeys('username', 'password'), logConfig: ConfigLogger.showNone());
   ///```
   ///
@@ -67,7 +67,7 @@ class ConfigLogger {
   ///
   ///
   ///## Example
-  ///```
+  ///``` dart
   ///Transmission api = Transmission(AuthKeys('username', 'password'), logConfig: ConfigLogger.recommended());
   ///```
   ///

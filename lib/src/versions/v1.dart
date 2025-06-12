@@ -102,7 +102,7 @@ class V1 extends Version {
       }
     } on DioException catch (e) {
       throw TransmissionDioError(
-        e.message!,
+        e.message ?? 'unknown error:$e',
         orginal: e,
         statusCode: e.response?.statusCode,
       );
